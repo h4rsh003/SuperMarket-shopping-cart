@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
 import CartItem from '../components/CartItem';
 import { Link } from "react-router-dom";
+import toast from 'react-hot-toast';
 
 const Cart = () => {
     const { cart } = useSelector((state) => state);
@@ -17,7 +18,7 @@ const Cart = () => {
                 cart.length > 0 ?
                     (
                         <div className='flex flex-col lg:flex-row gap-10 pb-20'>
-                            
+
                             {/* --- LEFT SIDE: CART ITEMS --- */}
                             <div className='w-full lg:w-[60%] flex flex-col gap-6'>
                                 {
@@ -29,7 +30,7 @@ const Cart = () => {
 
                             <div className='w-full lg:w-[40%] h-fit p-8 bg-slate-900 border border-slate-800 rounded-3xl shadow-2xl sticky top-24'>
                                 <div className='flex flex-col h-full justify-between gap-y-10'>
-                                    
+
                                     {/* Header Part */}
                                     <div>
                                         <div className='text-cyan-400 font-bold uppercase tracking-widest text-sm mb-2'>
@@ -52,9 +53,10 @@ const Cart = () => {
                                             </p>
                                         </div>
 
-                                        <button className='w-full py-4 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white
-                                            font-bold text-lg uppercase tracking-wider shadow-lg shadow-cyan-500/30 
-                                            hover:shadow-cyan-500/50 hover:scale-105 transition-all duration-300'>
+                                        <button
+                                            onClick={() => toast.success("Checkout Successful! (Mock)")}
+                                            className='w-full py-4 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white ...'
+                                        >
                                             Checkout Now
                                         </button>
                                     </div>
@@ -63,7 +65,7 @@ const Cart = () => {
                             </div>
                         </div>
                     ) :
-                    
+
                     (
                         <div className='flex flex-col items-center justify-center h-[70vh] gap-6'>
                             <div className='relative'>
@@ -72,7 +74,7 @@ const Cart = () => {
                                     Your cart is empty!
                                 </h1>
                             </div>
-                            
+
                             <Link to={"/"}>
                                 <button className='px-10 py-3 rounded-full bg-gradient-to-r from-emerald-500 to-cyan-500 text-white
                                     font-bold text-lg uppercase tracking-wider shadow-lg shadow-emerald-500/30
