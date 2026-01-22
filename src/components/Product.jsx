@@ -16,47 +16,65 @@ const Product = ({ item }) => {
         dispatch(remove(item.id));
         toast.error("Item removed from Cart");
     }
+
     return (
-        <div className=' group flex flex-col justify-center items-center 
-          hover:scale-110 hover:shadow-2xl transition duration-300 ease-in gap-3 p-4 mt-10 ml-4 rounded-xl shadow-xl' >
-            <div>
-                <h1 className='w-40 overflow-hidden text-ellipsis whitespace-nowrap
-                  text-gray-700 font-semibold text-lg text-left mt-1'>{item.title}</h1>
+        <div className='group relative flex flex-col justify-between h-[400px] w-full
+        bg-slate-900 rounded-3xl overflow-hidden border border-slate-800 shadow-lg
+        transition-all duration-300 hover:shadow-[0_0_30px_rgba(34,211,238,0.15)] hover:-translate-y-2'>
+            
+            <div className='absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-cyan-900/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none'/>
+
+            <div className='h-[55%] w-full bg-white p-5 relative overflow-hidden flex justify-center items-center'>
+                <img 
+                    src={item.image} 
+                    alt="item" 
+                    className='h-full w-full object-contain transition-transform duration-500 group-hover:scale-110' 
+                />
             </div>
-            <div>
-                <p className='w-40 text-gray-500 font-normal text-[10px] text-left'>
-                    {item.description.split(" ").slice(0, 10).join(" ") + "..."}</p>
-            </div>
-            <div className='h-[180px]'>
-                <img src={item.image} alt="item"
-                    className='h-full w-full' />
-            </div>
-            <div className='flex justify-between gap-11 items-center w-full mt-5'>
+
+            <div className='flex flex-col justify-between p-4 h-[45%] bg-slate-950 relative z-20'>
+                
                 <div>
-                    <p className='text-green-600 font-semibold'>${item.price}</p>
+                    <h1 className='text-slate-100 font-bold text-md leading-tight h-10 overflow-hidden text-ellipsis display-webkit-box line-clamp-2 mb-1 group-hover:text-cyan-400 transition-colors duration-300'>
+                        {item.title}
+                    </h1>
+
+                    <p className='text-slate-500 text-[10px]'>
+                        {item.description.split(" ").slice(0, 10).join(" ") + "..."}
+                    </p>
                 </div>
-                {
-                    cart.some((p) => p.id == item.id) ?
-                        (<button
-                            className='text-gray-700 border border-gray-700 rounded-full
-                                font-semibold text-[10px] p-1 px-3 uppercase
-                                group-hover:bg-gray-700
-                                group-hover:text-white'
-                            onClick={removeFromCart}>
-                            Remove Item
-                        </button>) :
-                        (<button
-                            className='text-gray-700 border border-gray-700 rounded-full
-                            font-bold text-[10px] p-1 px-3 uppercase
-                            group-hover:bg-gray-700
-                            group-hover:text-white'
-                            onClick={addToCart}>
-                            Add to cart
-                        </button>)
-                }
+
+                <div className='flex justify-between items-center mt-2'>
+                    {/* Price */}
+                    <span className='text-xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-green-400'>
+                        ${item.price}
+                    </span>
+
+                    {
+                        cart.some((p) => p.id === item.id) ? 
+                        (
+                            <button
+                                className='group/btn relative px-4 py-1.5 rounded-full bg-slate-800 text-red-400 border border-slate-700
+                                font-bold text-[10px] uppercase tracking-wider transition-all duration-300
+                                hover:bg-red-500 hover:text-white hover:border-red-500 hover:shadow-[0_0_10px_rgba(239,68,68,0.5)]'
+                                onClick={removeFromCart}>
+                                Remove
+                            </button>
+                        ) : 
+                        (
+                            <button
+                                className='relative px-4 py-1.5 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white
+                                font-bold text-[10px] uppercase tracking-wider shadow-md shadow-cyan-500/20
+                                hover:shadow-cyan-500/50 hover:scale-105 transition-all duration-300'
+                                onClick={addToCart}>
+                                Add To Cart
+                            </button>
+                        )
+                    }
+                </div>
             </div>
         </div>
     );
 };
 
-export default Product
+export default Product;
