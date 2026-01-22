@@ -27,14 +27,14 @@ const Home = () => {
     }, [])
 
     return (
-        <div className='w-full pt-24'>
+        <div className='w-full pt-24 pb-10 bg-slate-900 min-h-screen'>
             
-            {/* Hero Section */}
-            <div className='flex flex-col items-center justify-center py-10 space-y-2 mb-6'>
-                <h1 className='text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-violet-600 drop-shadow-lg text-center'>
+            {/* Hero Section - Responsive Text Size */}
+            <div className='flex flex-col items-center justify-center py-8 space-y-3 mb-6'>
+                <h1 className='text-3xl md:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-violet-600 drop-shadow-lg text-center'>
                     TRENDING NOW
                 </h1>
-                <div className='h-1 w-24 bg-gradient-to-r from-cyan-400 to-violet-600 rounded-full'></div>
+                <div className='h-1 w-20 md:w-24 bg-gradient-to-r from-cyan-400 to-violet-600 rounded-full'></div>
             </div>
 
             {
@@ -45,7 +45,7 @@ const Home = () => {
                 :
                 items.length > 0 ?
                     (
-                        <div className='grid xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 max-w-6xl p-2 mx-auto gap-y-10 gap-x-5 min-h-[80vh]'>
+                        <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 max-w-6xl px-4 mx-auto gap-8 min-h-[80vh]'>
                             {
                                 items.map((item) => (
                                     <Product key={item.id} item={item} />
