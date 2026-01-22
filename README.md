@@ -3,7 +3,7 @@
 # 🛒 SuperMarket - Modern Redux Shopping Cart
 ### Production-ready E-commerce interface with real-time state management.
 
-[![Live Demo](https://img.shields.io/badge/Live_Demo-Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://shopping-cart-six-silk.vercel.app/)
+[![Live Demo](https://img.shields.io/badge/Live_Demo-Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://super-market-shopping-cart.vercel.app/)
 [![React](https://img.shields.io/badge/React_18-20232a?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
 [![Redux](https://img.shields.io/badge/Redux_Toolkit-593d88?style=for-the-badge&logo=redux&logoColor=white)](https://redux-toolkit.js.org/)
 [![Tailwind](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
