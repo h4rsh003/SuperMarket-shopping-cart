@@ -66,8 +66,8 @@ src/
 
 1. **Clone the repository**
 ```bash
-git clone [https://github.com/h4rsh003/shopping-cart.git](https://github.com/h4rsh003/shopping-cart.git)
-cd shopping-cart
+git clone [https://github.com/h4rsh003/SuperMarket-shopping-cart.git](https://github.com/h4rsh003/SuperMarket-shopping-cart.git)
+cd SuperMarket-shopping-cart
 
 ```
 
