@@ -3,7 +3,7 @@
 # 🛒 SuperMarket - Modern Redux Shopping Cart
 ### Production-ready E-commerce interface with real-time state management.
 
-[![Live Demo](https://img.shields.io/badge/Live_Demo-Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://your-project-link.vercel.app)
+[![Live Demo](https://img.shields.io/badge/Live_Demo-Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://shopping-cart-six-silk.vercel.app/)
 [![React](https://img.shields.io/badge/React_18-20232a?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
 [![Redux](https://img.shields.io/badge/Redux_Toolkit-593d88?style=for-the-badge&logo=redux&logoColor=white)](https://redux-toolkit.js.org/)
 [![Tailwind](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
@@ -15,13 +15,13 @@
 ---
 
 ### 📖 Overview
-**SuperMarket** is a highly interactive e-commerce shopping cart system built using **React.js** and **Redux Toolkit**. It features a premium "Electric Nebula" theme and production-ready state management to handle complex user interactions across all devices.
+**SuperMarket** is a highly interactive e-commerce shopping cart system built using **React.js** and **Redux Toolkit**. It features a premium UI and production-ready state management to handle complex user interactions across all devices.
 
 ---
 
 ### ✨ Key Features
 
-- **🎨 Electric Nebula Theme:** A premium Dark Mode UI featuring glassmorphism effects, neon gradients, and glowing micro-interactions.
+- **🎨 Modern UI/UX:** A clean, responsive interface featuring glassmorphism effects and smooth micro-interactions.
 - **📱 Responsive Architecture:** Optimized for mobile, tablet, and desktop with custom grid layouts and a responsive navigation menu.
 - **💾 State Persistence:** Engineered persistent cart logic using **localStorage**, ensuring user items are retained across sessions and page refreshes.
 - **⚡ Real-Time Updates:** Delivered a fast experience with real-time calculations for order totals and item counts.
