@@ -108,5 +108,3 @@ The app will launch at `http://localhost:3000`.
 ---
 
 <p align="center">Made with ❤️ by Harsh Shrivastava</p>
-
-```
